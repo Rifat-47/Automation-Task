@@ -5,19 +5,20 @@ import time
 
 driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
 
-website = "https://vatb.mypainlog.ai/#/"
+website = "https://stg.mypainlog.ai/#/"
 driver.get(website)
-time.sleep(10)
+time.sleep(5)
 driver.maximize_window()
+time.sleep(2)
 print(driver.title)
 
-driver.find_element(by="xpath", value="//input[@placeholder='Enter Your Email Address']").send_keys('vatbwebtest1@yopmail.com')
-time.sleep(3)
+driver.find_element(by="xpath", value="//input[@placeholder='Enter Your Email Address']").send_keys('stgwebtest1@yopmail.com')
+time.sleep(2)
 
 driver.find_element(by="xpath", value="//input[@placeholder='Enter Your Password']").send_keys('Qweqwe1234@')
-time.sleep(3)
+time.sleep(2)
 
 driver.find_element(by="xpath", value="//button[normalize-space()='Sign in']").click()
-time.sleep(15)      
+time.sleep(12)      
 
 driver.quit()
